@@ -6,6 +6,9 @@ const router=express.Router()
 router.post('/login',authController.loginUser);
 router.post('/register',authController.registerUser);
 router.post('/change-password',authMiddleware.authMiddleware,authController.changePassword);
+router.post('/resetPassword',authMiddleware.authMiddleware)
+router.post('/google/login')
+router.post('/google/callback')
 router.post('/logout',authController.logoutUser)
 
 
